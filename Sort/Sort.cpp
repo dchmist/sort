@@ -1,5 +1,5 @@
 #include "Sort.h"
-#include "Logs.h"
+#include "../LOG/Logs.h"
 
 void Sort::addAlgorithm(AdditionalTypes::SortType sortType, AbstractSort* algo)
 {

@@ -13,48 +13,51 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Pliki źródłowe\SortTypes">
-      <UniqueIdentifier>{274d3f05-45da-4aad-ae6f-4e87449aacc7}</UniqueIdentifier>
+    <Filter Include="Pliki źródłowe\Sort">
+      <UniqueIdentifier>{3dbd3fd7-5fbc-475d-83fb-b32e06e6d5f4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\FileSupport">
-      <UniqueIdentifier>{369fc451-8c1e-4025-bb27-26a4dbdd234d}</UniqueIdentifier>
+    <Filter Include="Pliki źródłowe\Sort\SortTypes">
+      <UniqueIdentifier>{dac0b996-092b-4e20-9737-90abaaa0dc68}</UniqueIdentifier>
     </Filter>
     <Filter Include="Pliki źródłowe\LOG">
-      <UniqueIdentifier>{ea17fe05-4a5d-4b4d-bbee-f25e75b01fd0}</UniqueIdentifier>
+      <UniqueIdentifier>{9f6e6e92-7aae-45e2-b933-a5638aee9645}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\FileSupport">
+      <UniqueIdentifier>{1c8206a9-4989-4f74-b13c-e64caedbf2a4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="BubbleSort.cpp">
-      <Filter>Pliki źródłowe\SortTypes</Filter>
+    <ClCompile Include="Sort\SortTypes\BubbleSort.cpp">
+      <Filter>Pliki źródłowe\Sort\SortTypes</Filter>
     </ClCompile>
-    <ClCompile Include="FileHandler.cpp">
+    <ClCompile Include="Sort\Sort.cpp">
+      <Filter>Pliki źródłowe\Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSupport\FileHandler.cpp">
       <Filter>Pliki źródłowe\FileSupport</Filter>
-    </ClCompile>
-    <ClCompile Include="Sort.cpp">
-      <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AbstractSort.h">
-      <Filter>Pliki źródłowe</Filter>
-    </ClInclude>
     <ClInclude Include="AdditionalTypes.h">
       <Filter>Pliki źródłowe</Filter>
     </ClInclude>
-    <ClInclude Include="BubbleSort.h">
-      <Filter>Pliki źródłowe\SortTypes</Filter>
+    <ClInclude Include="Sort\SortTypes\BubbleSort.h">
+      <Filter>Pliki źródłowe\Sort\SortTypes</Filter>
     </ClInclude>
-    <ClInclude Include="FileHandler.h">
-      <Filter>Pliki źródłowe\FileSupport</Filter>
+    <ClInclude Include="Sort\Sort.h">
+      <Filter>Pliki źródłowe\Sort</Filter>
     </ClInclude>
-    <ClInclude Include="Logs.h">
+    <ClInclude Include="LOG\Logs.h">
       <Filter>Pliki źródłowe\LOG</Filter>
     </ClInclude>
-    <ClInclude Include="Sort.h">
-      <Filter>Pliki źródłowe</Filter>
+    <ClInclude Include="FileSupport\FileHandler.h">
+      <Filter>Pliki źródłowe\FileSupport</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort\SortTypes\AbstractSort.h">
+      <Filter>Pliki źródłowe\Sort\SortTypes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

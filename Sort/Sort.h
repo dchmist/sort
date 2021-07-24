@@ -1,6 +1,6 @@
 #pragma once
 
-#include "AbstractSort.h"
+#include "../Sort/SortTypes/AbstractSort.h"
 #include <memory>
 #include <map>
 

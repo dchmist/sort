@@ -1,6 +1,6 @@
 #include "BubbleSort.h"
-#include "FileHandler.h"
-#include "Logs.h"
+#include "../../FileSupport/FileHandler.h"
+#include "../../LOG/Logs.h"
 #include <algorithm>
 
 using namespace SortTypes;

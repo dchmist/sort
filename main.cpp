@@ -1,11 +1,10 @@
-#include "Sort.h"
-#include "BubbleSort.h"
+#include "Sort/Sort.h"
+#include "Sort/SortTypes/BubbleSort.h"
 #include <iostream>
 
 int main(int argc, char* argv)
 {
 	std::string_view path{"C:\\Users\\twist\\source\\test_data\\test.txt"};
-	//std::string_view path{ "C:/Users/twist/source/test_data/test.txt" };
 	std::cout << "Path : " << path << '\n';
 	
 	Sort sortowanko;
