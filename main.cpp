@@ -1,16 +1,15 @@
-#include "Sort/Sort.h"
-#include "Sort/SortTypes/BubbleSort.h"
+#include "Sort/SortManager.h"
+#include "Factory/SortFactory.h"
 #include <iostream>
 
-int main(int argc, char* argv)
+int main(int argc, char** argv)
 {
-	std::string_view path{"C:\\Users\\twist\\source\\test_data\\test.txt"};
+	std::string_view path{ "/mnt/c/Users/twist/source/test_data/test.txt" };
 	std::cout << "Path : " << path << '\n';
 	
-	Sort sortowanko;
-	SortTypes::BubbleSort bbSort;
-	sortowanko.addAlgorithm(AdditionalTypes::SortType::bubbleSort, &bbSort);
-	auto retVal = sortowanko.sort(path, AdditionalTypes::SortType::bubbleSort);
+	Factory::SortFactory factory;
+	Sort::SortManager sortManager{&factory};
+	auto retVal = sortManager.sort(path, AdditionalTypes::SortType::bubbleSort);
 	std::cout << "Sort result : " << static_cast<int>(retVal) << '\n';
 	return 1;
 }

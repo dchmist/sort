@@ -12,6 +12,6 @@ namespace AdditionalTypes
 	
 	enum class SortType
 	{
-		bubbleSort
+		bubbleSort = 0
 	};
 }

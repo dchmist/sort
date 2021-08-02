@@ -142,16 +142,22 @@
   <ItemGroup>
     <ClCompile Include="FileSupport\FileHandler.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Sort\Sort.cpp" />
+    <ClCompile Include="Sort\SortManager.cpp" />
     <ClCompile Include="Sort\SortTypes\BubbleSort.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Abstract\AbstractFactory.h" />
+    <ClInclude Include="Abstract\AbstractSort.h" />
     <ClInclude Include="AdditionalTypes.h" />
+    <ClInclude Include="Factory\SortFactory.h" />
     <ClInclude Include="FileSupport\FileHandler.h" />
     <ClInclude Include="LOG\Logs.h" />
-    <ClInclude Include="Sort\Sort.h" />
-    <ClInclude Include="Sort\SortTypes\AbstractSort.h" />
+    <ClInclude Include="Sort\SortManager.h" />
     <ClInclude Include="Sort\SortTypes\BubbleSort.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+    <Text Include="Factory\SortFactory.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

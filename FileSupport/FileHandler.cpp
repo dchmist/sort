@@ -18,12 +18,13 @@ std::vector<int> FileHandler::getContentOfFile(const std::string_view& pathToFil
 			buff.push_back(temp);
 		}
 		file.close();
-		LOG::INF(std::string{ std::string{ "Read the file " + std::string{ pathToFile } + ", inside " + std::to_string(buff.size()) + " numbers" } });
-		return std::move(buff);
+		LOG::INF(std::string{ "Read the file " + std::string{ pathToFile } + ", inside " + std::to_string(buff.size()) + " numbers" });
+		return buff;
 	}
 	LOG::ERR(std::string{ "Read file command failed " + std::string{ pathToFile } });
 	return {};
 }
+
 bool FileHandler::saveData(const std::vector<int>& buff, const std::string_view& pathToFile)
 {
 	std::ofstream file;

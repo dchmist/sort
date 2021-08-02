@@ -3,7 +3,8 @@
 #include "../../LOG/Logs.h"
 #include <algorithm>
 
-using namespace SortTypes;
+using namespace Sort::SortTypes;
+
 AdditionalTypes::Result BubbleSort::sort(const std::string_view& filePath)
 {
     LOG::INF("BubbleSort started");
@@ -15,6 +16,7 @@ AdditionalTypes::Result BubbleSort::sort(const std::string_view& filePath)
 	bubbleSort(buff);
 	return FileSupport::FileHandler::saveData(buff, changeFileName(filePath)) ? AdditionalTypes::Result::success : AdditionalTypes::Result::failure;
 }
+
 void BubbleSort::bubbleSort(std::vector<int>& buffer)
 {
     for (size_t i = 0; i < buffer.size(); ++i) {
@@ -25,9 +27,13 @@ void BubbleSort::bubbleSort(std::vector<int>& buffer)
         }
     }
 }
+
 std::string BubbleSort::changeFileName(const std::string_view& oldPath)
 {
-    auto slashPos = std::find(oldPath.rbegin(), oldPath.rend(), '\\');
+    auto slashPos = std::find(oldPath.rbegin(), oldPath.rend(), '/');
+    if(slashPos == oldPath.rend())
+        slashPos = std::find(oldPath.rbegin(), oldPath.rend(), '\\');
+
     if (slashPos != oldPath.rend())
     {
         std::string removedNameOfFile{ slashPos, oldPath.rend() };
@@ -38,7 +44,7 @@ std::string BubbleSort::changeFileName(const std::string_view& oldPath)
     }
     else {
         using namespace std::string_literals;
-        LOG::ERR(std::string{ "There is no \'\\' inside of "s + std::string{oldPath} });
+        LOG::ERR(std::string{ "There is no \'\\' or / inside of "s + std::string{oldPath} });
     }
     return {};
 }

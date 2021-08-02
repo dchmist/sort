@@ -25,6 +25,12 @@
     <Filter Include="Pliki źródłowe\FileSupport">
       <UniqueIdentifier>{1c8206a9-4989-4f74-b13c-e64caedbf2a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\Abstract">
+      <UniqueIdentifier>{6a8c45e6-82bc-4fcd-89e3-131c8abc2e2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Factory">
+      <UniqueIdentifier>{fc127152-de3b-4c33-bd76-3ed5a4ca3ad4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -33,7 +39,7 @@
     <ClCompile Include="Sort\SortTypes\BubbleSort.cpp">
       <Filter>Pliki źródłowe\Sort\SortTypes</Filter>
     </ClCompile>
-    <ClCompile Include="Sort\Sort.cpp">
+    <ClCompile Include="Sort\SortManager.cpp">
       <Filter>Pliki źródłowe\Sort</Filter>
     </ClCompile>
     <ClCompile Include="FileSupport\FileHandler.cpp">
@@ -47,7 +53,7 @@
     <ClInclude Include="Sort\SortTypes\BubbleSort.h">
       <Filter>Pliki źródłowe\Sort\SortTypes</Filter>
     </ClInclude>
-    <ClInclude Include="Sort\Sort.h">
+    <ClInclude Include="Sort\SortManager.h">
       <Filter>Pliki źródłowe\Sort</Filter>
     </ClInclude>
     <ClInclude Include="LOG\Logs.h">
@@ -56,8 +62,22 @@
     <ClInclude Include="FileSupport\FileHandler.h">
       <Filter>Pliki źródłowe\FileSupport</Filter>
     </ClInclude>
-    <ClInclude Include="Sort\SortTypes\AbstractSort.h">
-      <Filter>Pliki źródłowe\Sort\SortTypes</Filter>
+    <ClInclude Include="Abstract\AbstractSort.h">
+      <Filter>Pliki źródłowe\Abstract</Filter>
     </ClInclude>
+    <ClInclude Include="Abstract\AbstractFactory.h">
+      <Filter>Pliki źródłowe\Abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\SortFactory.h">
+      <Filter>Pliki źródłowe\Factory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Factory\SortFactory.cpp">
+      <Filter>Pliki źródłowe\Factory</Filter>
+    </Text>
+    <Text Include="CMakeLists.txt">
+      <Filter>Pliki źródłowe</Filter>
+    </Text>
   </ItemGroup>
 </Project>

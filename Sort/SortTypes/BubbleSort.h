@@ -1,11 +1,11 @@
 #pragma once
 
-#include "AbstractSort.h"
+#include "../../Abstract/AbstractSort.h"
 #include <vector>
 
-namespace SortTypes {
+namespace Sort::SortTypes {
 
-	class BubbleSort : public AbstractSort
+	class BubbleSort : public Abstract::AbstractSort
 	{
 	public:
 		AdditionalTypes::Result sort(const std::string_view& filePath) override;
