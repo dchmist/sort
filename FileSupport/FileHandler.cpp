@@ -1,5 +1,5 @@
 #include "FileHandler.h"
-#include "../LOG/Logs.h"
+#include "LOG/Logs.h"
 #include <fstream>
 #include <string>
 

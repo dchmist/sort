@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../AdditionalTypes.h"
+#include "AdditionalTypes.h"
 #include <string_view>
 
 namespace Abstract 

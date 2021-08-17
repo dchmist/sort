@@ -1,5 +1,5 @@
 #include "SortFactory.h"
-#include "../Sort/SortTypes/BubbleSort.h"
+#include "Sort/SortTypes/BubbleSort.h"
 
 using namespace Factory;
 SortFactory::SortFactory()

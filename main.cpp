@@ -22,13 +22,13 @@ int main(int argc, char** argv)
 {
 	AdditionalTypes::SortType sortType{ AdditionalTypes::SortType::bubbleSort };
 	std::string_view path;
-	if (argc < 1)
+	if (argc < 2)
 	{
 		LOG::ERR("Too few arguments");
 		printHelp();
 		return 0;
 	}
-	else if (argc == 1 && std::string{argv[1]}.compare("-h") == 0)
+	else if (argc == 2 && std::string{argv[1]}.compare("-h") == 0)
 	{
 		LOG::ERR("Too few arguments");
 		printHelp();

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Abstract/AbstractFactory.h"
+#include "Abstract/AbstractFactory.h"
 #include <memory>
 #include <map>
 

@@ -1,5 +1,5 @@
-#include "SortManager.h"
-#include "../LOG/Logs.h"
+#include "Sort/SortManager.h"
+#include "LOG/Logs.h"
 
 using namespace Sort;
 

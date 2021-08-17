@@ -5,12 +5,12 @@
 
 namespace Sort::SortTypes {
 
-	class BubbleSort : public Abstract::AbstractSort
+	class QuickSort : public Abstract::AbstractSort
 	{
 	public:
 		AdditionalTypes::Result sort(const std::string_view& filePath) override;
 	private:
-		void bubbleSort(std::vector<int>& buffer);
+		void quickSort(std::vector<int>& buffer, unsigned int left, unsigned int right);
 		std::string changeFileName(const std::string_view& oldPath);
 	};
 
