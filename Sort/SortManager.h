@@ -7,7 +7,7 @@ namespace Sort {
 	{
 	public:
 		SortManager(Abstract::AbstractFactory* fac);
-		AdditionalTypes::Result sort(const std::string_view& pathToFile, AdditionalTypes::SortType sortType);
+		AdditionalTypes::Result sort(const std::string_view& input, AdditionalTypes::SortType sortType, const std::string_view& output);
 	private:
 		Abstract::AbstractFactory* factory;
 	};

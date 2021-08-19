@@ -8,8 +8,10 @@ include_directories(${HOME_LOC})
 
 add_executable(Sort
 	main.cpp
+	ParseArgs.cpp
 	Sort/SortManager.cpp
 	Sort/SortTypes/BubbleSort.cpp
+	Sort/SortTypes/QuickSort.cpp
 	FileSupport/FileHandler.cpp
 	Factory/SortFactory.cpp
 )

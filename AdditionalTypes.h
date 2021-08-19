@@ -1,5 +1,6 @@
 #pragma once
-
+#include <unordered_map>
+#include <string>
 namespace AdditionalTypes
 {
 	enum class Result
@@ -12,6 +13,12 @@ namespace AdditionalTypes
 	
 	enum class SortType
 	{
-		bubbleSort = 0
+		bubbleSort,
+		quickSort
+	};
+	const std::unordered_map<std::string, SortType> strToSortType
+	{
+		{"bubbleSort", SortType::bubbleSort},
+		{"quickSort", SortType::quickSort}
 	};
 }

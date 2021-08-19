@@ -5,16 +5,16 @@
 
 using namespace Sort::SortTypes;
 
-AdditionalTypes::Result BubbleSort::sort(const std::string_view& filePath)
+AdditionalTypes::Result BubbleSort::sort(const std::string_view& input, const std::string_view& output)
 {
     LOG::INF("BubbleSort started");
-    auto buff = FileSupport::FileHandler::getContentOfFile(filePath);
+    auto buff = FileSupport::FileHandler::getContentOfFile(input);
     if (buff.size() == 0)
     {
         return AdditionalTypes::Result::emptyBuffer;
     }
 	bubbleSort(buff);
-	return FileSupport::FileHandler::saveData(buff, changeFileName(filePath)) ? AdditionalTypes::Result::success : AdditionalTypes::Result::failure;
+	return FileSupport::FileHandler::saveData(buff, output) ? AdditionalTypes::Result::success : AdditionalTypes::Result::failure;
 }
 
 void BubbleSort::bubbleSort(std::vector<int>& buffer)
@@ -29,27 +29,4 @@ void BubbleSort::bubbleSort(std::vector<int>& buffer)
             }
         }
     }
-}
-
-std::string BubbleSort::changeFileName(const std::string_view& oldPath)
-{
-    auto slashPos = std::find(oldPath.rbegin(), oldPath.rend(), '/');
-    if(slashPos == oldPath.rend())
-    {
-        slashPos = std::find(oldPath.rbegin(), oldPath.rend(), '\\');
-    }
-    if (slashPos != oldPath.rend())
-    {
-        std::string removedNameOfFile{ slashPos, oldPath.rend() };
-        std::reverse(removedNameOfFile.begin(), removedNameOfFile.end());
-        removedNameOfFile += "BubbleSortResult.txt";
-        LOG::INF(std::string{ "Changed name to " + removedNameOfFile });
-        return removedNameOfFile;
-    }
-    else 
-    {
-        using namespace std::string_literals;
-        LOG::ERR(std::string{ "There is no \'\\' or / inside of "s + std::string{oldPath} });
-    }
-    return {};
 }

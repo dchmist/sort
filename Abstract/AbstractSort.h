@@ -8,7 +8,7 @@ namespace Abstract
 	class AbstractSort
 	{
 	public:
-		virtual AdditionalTypes::Result sort(const std::string_view& filePath) = 0;
+		virtual AdditionalTypes::Result sort(const std::string_view& input, const std::string_view& output) = 0;
 		virtual ~AbstractSort() = default;
 	};
 }

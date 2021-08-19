@@ -8,7 +8,7 @@ SortManager::SortManager(Abstract::AbstractFactory* fac)
 	factory = fac;
 }
 
-AdditionalTypes::Result SortManager::sort(const std::string_view& pathToFile, AdditionalTypes::SortType sortType)
+AdditionalTypes::Result SortManager::sort(const std::string_view& input, AdditionalTypes::SortType sortType, const std::string_view& output)
 {
-	return factory->getSortAlgorithm(sortType)->sort(pathToFile);
+	return factory->getSortAlgorithm(sortType)->sort(input, output);
 }
